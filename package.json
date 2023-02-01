@@ -2,6 +2,9 @@
   "name": "scratch-gui",
   "version": "0.1.0",
   "description": "GraphicaL User Interface for creating and running Scratch 3.0 projects",
+  "engines": {
+    "node": "16.x"
+  },
   "main": "./dist/scratch-gui.js",
   "scripts": {
     "build": "npm run clean && webpack --colors --bail",
