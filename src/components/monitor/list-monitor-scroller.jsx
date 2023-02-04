@@ -40,6 +40,7 @@ class ListMonitorScroller extends React.Component {
                 <div className={styles.listIndex}>{index + 1 /* one indexed */}</div>
                 <div
                     className={styles.listValue}
+                    // eslint-disable-next-line react/no-unknown-property
                     dataIndex={index}
                     style={{background: this.props.categoryColor}}
                     onClick={this.props.draggable ? this.handleEventFactory(index) : null}
