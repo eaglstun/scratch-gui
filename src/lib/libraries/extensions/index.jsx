@@ -38,16 +38,35 @@ import wedo2ConnectionTipIconURL from './wedo2/wedo-button-illustration.svg';
 
 import boostIconURL from './boost/boost.png';
 import boostInsetIconURL from './boost/boost-small.svg';
-import boostConnectionIconURL from './boost/boost-illustration.svg';
-import boostConnectionSmallIconURL from './boost/boost-small.svg';
-import boostConnectionTipIconURL from './boost/boost-button-illustration.svg';
+// import boostConnectionIconURL from './boost/boost-illustration.svg';
+// import boostConnectionSmallIconURL from './boost/boost-small.svg';
+// import boostConnectionTipIconURL from './boost/boost-button-illustration.svg';
 
-import gdxforIconURL from './gdxfor/gdxfor.png';
-import gdxforInsetIconURL from './gdxfor/gdxfor-small.svg';
-import gdxforConnectionIconURL from './gdxfor/gdxfor-illustration.svg';
-import gdxforConnectionSmallIconURL from './gdxfor/gdxfor-small.svg';
+// import gdxforIconURL from './gdxfor/gdxfor.png';
+// import gdxforInsetIconURL from './gdxfor/gdxfor-small.svg';
+// import gdxforConnectionIconURL from './gdxfor/gdxfor-illustration.svg';
+// import gdxforConnectionSmallIconURL from './gdxfor/gdxfor-small.svg';
 
 export default [
+    {
+        name: 'Developer',
+        extensionId: 'developer',
+        collaborator: 'Rack & Pinecon',
+        // iconURL: boostIconURL,
+        // insetIconURL: boostInsetIconURL,
+        description: (
+            <FormattedMessage
+                defaultMessage="New blocks."
+                description="my block"
+                id="gui.extension.newextension.description"
+            />
+        ),
+        featured: true,
+        disabled: false,
+        internetConnectionRequired: false,
+        bluetoothRequired: false
+        // helpLink: 'https://scratch.mit.edu/wedo'
+    },
     {
         name: 'NewExtension',
         extensionId: 'newextension',
