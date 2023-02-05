@@ -129,9 +129,10 @@ const ProjectFetcherHOC = function (WrappedComponent) {
         reduxProjectId: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
         setProjectId: PropTypes.func
     };
+
     ProjectFetcherComponent.defaultProps = {
         assetHost: 'https://assets.scratch.mit.edu',
-        projectHost: 'https://projects.scratch.mit.edu'
+        projectHost: 'http://localhost:8602' // 'https://projects.scratch.mit.edu'
     };
 
     const mapStateToProps = state => ({

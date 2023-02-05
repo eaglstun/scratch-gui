@@ -217,7 +217,9 @@ const reducer = function (state, action) {
         return Object.assign({}, state, {
             loadingState: LoadingState.SHOWING_WITH_ID
         });
+
     case SET_PROJECT_ID:
+        console.log('SET_PROJECT_ID', state.projectId, action.projectId);
         // if the projectId hasn't actually changed do nothing
         if (state.projectId === action.projectId) {
             return state;
@@ -294,13 +296,16 @@ const reducer = function (state, action) {
             });
         }
         return state;
+
     case START_MANUAL_UPDATING:
+        console.log('START_MANUAL_UPDATING', state.loadingState, LoadingState.SHOWING_WITH_ID);
         if (state.loadingState === LoadingState.SHOWING_WITH_ID) {
             return Object.assign({}, state, {
                 loadingState: LoadingState.MANUAL_UPDATING
             });
         }
         return state;
+        
     case START_REMIXING:
         if (state.loadingState === LoadingState.SHOWING_WITH_ID) {
             return Object.assign({}, state, {
@@ -465,10 +470,13 @@ const projectError = error => ({
     error: error
 });
 
-const setProjectId = id => ({
-    type: SET_PROJECT_ID,
-    projectId: id
-});
+const setProjectId = id => {
+    console.log('setProjectId', id);
+    return ({
+        type: SET_PROJECT_ID,
+        projectId: id // '1234'
+    });
+};
 
 const requestNewProject = needSave => {
     if (needSave) return {type: START_UPDATING_BEFORE_CREATING_NEW};
@@ -492,9 +500,12 @@ const autoUpdateProject = () => ({
     type: START_AUTO_UPDATING
 });
 
-const manualUpdateProject = () => ({
-    type: START_MANUAL_UPDATING
-});
+const manualUpdateProject = () => {
+    console.log('manualUpdateProject');
+    return ({
+        type: START_MANUAL_UPDATING
+    });
+};
 
 const saveProjectAsCopy = () => ({
     type: START_UPDATING_BEFORE_CREATING_COPY

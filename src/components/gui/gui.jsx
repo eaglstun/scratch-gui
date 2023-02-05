@@ -213,7 +213,7 @@ const GUIComponent = props => {
                     canEditTitle={canEditTitle}
                     canManageFiles={canManageFiles}
                     canRemix={canRemix}
-                    canSave={canSave}
+                    canSave
                     canShare={canShare}
                     className={styles.menuBarPosition}
                     enableCommunity={enableCommunity}

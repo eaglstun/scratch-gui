@@ -197,10 +197,12 @@ class MenuBar extends React.Component {
         this.props.onClickRemix();
         this.props.onRequestCloseFile();
     }
+    
     handleClickSave () {
         this.props.onClickSave();
         this.props.onRequestCloseFile();
     }
+
     handleClickSaveAsCopy () {
         this.props.onClickSaveAsCopy();
         this.props.onRequestCloseFile();
